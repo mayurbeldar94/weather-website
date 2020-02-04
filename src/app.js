@@ -5,6 +5,8 @@ const hbs =require('hbs')
 const geocode =require('./util/geocode')
 const forcast =require('./util/forcast')
 
+const port = process.env.PORT || 3000
+
 //Define path for express config
 const publicDirName = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../template/views')
@@ -73,15 +75,6 @@ app.get('/weather',(req , res) => {
  })
 
 
-
-
-
-
-
-
-
-
-
       app.get('/help/*',(req, res)=>{
         res.render('404_all',{
             title :'404',
@@ -101,6 +94,6 @@ app.get('/weather',(req , res) => {
     })
     
     
-app.listen(3000,()=>{
-    console.log("Server listenig on port 3000")
+app.listen(port,()=>{
+    console.log("Server listenig on port " +port)
 })
