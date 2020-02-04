@@ -1,6 +1,6 @@
 
 
-console.log('welcome to client side javascript')
+
 
 
 const webForm = document.querySelector('form')
